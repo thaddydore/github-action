@@ -1,0 +1,10 @@
+name: push-workflow
+run-name: check-pushes
+on: push
+
+jobs:
+  greets-who-pushes:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Thank User who pushes code
+        run: echo Thank you ${{github.actor}} for pushing your code
